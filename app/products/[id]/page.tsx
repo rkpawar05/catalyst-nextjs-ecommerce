@@ -186,6 +186,11 @@ export default async function ProductDetailsPage({
                                 thumbnail: product.thumbnail,
                                 rating: product.rating,
                                 stock: product.stock,
+                                description: product.description,
+                                discountPercentage: product.discountPercentage,
+                                brand: product.brand,
+                                category: product.category,
+                                images: product.images,
                             }}
                         />
                     ) : (
