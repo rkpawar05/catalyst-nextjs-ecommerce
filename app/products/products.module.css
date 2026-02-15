@@ -1,0 +1,362 @@
+/* Products Page Styles */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #718096;
+    margin: 0;
+}
+
+/* Controls (Filter and Sort) */
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filterContainer,
+.sortContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filterLabel,
+.sortLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.filterSelect,
+.sortSelect {
+    /* Remove default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Custom styling */
+    padding: 12px 40px 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d3748;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 200px;
+
+    /* Custom dropdown arrow using gradient */
+    background-image: linear-gradient(45deg, transparent 50%, #667eea 50%),
+        linear-gradient(135deg, #667eea 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.filterSelect:hover,
+.sortSelect:hover {
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+    background-color: #f8f9ff;
+}
+
+.filterSelect:focus,
+.sortSelect:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: white;
+}
+
+/* Style for option elements */
+.filterSelect option,
+.sortSelect option {
+    padding: 10px;
+    background-color: white;
+    color: #2d3748;
+}
+
+/* Product Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Product Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 220px;
+    background-color: #f7fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardActions {
+    padding: 0 16px 16px 16px;
+}
+
+.productTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.productBrand {
+    font-size: 13px;
+    color: #718096;
+    margin: 0 0 12px 0;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.discount {
+    font-size: 13px;
+    font-weight: 600;
+    color: #48bb78;
+    background-color: #c6f6d5;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.addToCartBtn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.addToCartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.addToCartBtn:active {
+    transform: translateY(0);
+}
+
+/* Pagination */
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.paginationButton {
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+}
+
+.paginationButton:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.paginationInfo {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .headerActions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .filterContainer,
+    .sortContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .filterSelect,
+    .sortSelect {
+        width: 100%;
+        min-height: 44px;
+        /* Touch-friendly */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    /* Touch-friendly pagination */
+    .paginationButton {
+        min-height: 44px;
+        min-width: 80px;
+    }
+
+    .addToCartBtn {
+        min-height: 44px;
+        /* Touch-friendly */
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    .headerActions {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .paginationContainer {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .paginationButton {
+        width: 100%;
+    }
+}

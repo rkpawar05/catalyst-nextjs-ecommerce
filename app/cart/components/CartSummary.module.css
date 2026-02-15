@@ -1,0 +1,205 @@
+.summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 1.5rem 0;
+}
+
+.summaryLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+.totalLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.totalAmount {
+    color: #667eea;
+    font-size: 1.5rem;
+}
+
+.checkoutBtn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    margin-bottom: 1rem;
+}
+
+.checkoutBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.checkoutBtn:active {
+    transform: translateY(0);
+}
+
+.clearBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clearBtn:hover {
+    background: #fecaca;
+    border-color: #fca5a5;
+}
+
+.clearBtn:active {
+    transform: scale(0.98);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.2s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 1rem 0;
+}
+
+.modalMessage {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0 0 2rem 0;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.modalCancelBtn,
+.modalConfirmBtn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modalCancelBtn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.modalCancelBtn:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.modalConfirmBtn {
+    background: #dc2626;
+    color: white;
+    border: 1px solid #dc2626;
+}
+
+.modalConfirmBtn:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.modalCancelBtn:active,
+.modalConfirmBtn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary {
+        padding: 1.5rem;
+        position: relative;
+        top: 0;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .checkoutBtn,
+    .clearBtn {
+        min-height: 44px;
+        /* Touch-friendly */
+        font-size: 1rem;
+    }
+}

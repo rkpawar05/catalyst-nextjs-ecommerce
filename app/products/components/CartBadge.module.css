@@ -1,0 +1,46 @@
+.cartLink {
+    position: relative;
+    text-decoration: none;
+}
+
+.cartIcon {
+    font-size: 1.75rem;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cartIcon:hover {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    animation: badgePop 0.3s ease;
+}
+
+@keyframes badgePop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
